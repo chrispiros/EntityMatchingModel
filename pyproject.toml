@@ -50,7 +50,9 @@ dev = [
   "matplotlib",
   "pygments",
   "pandoc",
-  "pympler",
+  "pympler"
+]
+preprocessing = [
   "unidecode"
 ]
 test = [
