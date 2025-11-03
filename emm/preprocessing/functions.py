@@ -23,11 +23,17 @@ from functools import partial
 from typing import Any, Callable
 
 import cleanco
+import warnings
 
 try:
     from unidecode import unidecode
 except ImportError:
     unidecode = None
+    warnings.warn(
+        "The 'unidecode' module is not installed. 'strip_accents_unicode' will default to an identity function. "
+        "Install 'unidecode' to enable accent stripping functionality.",
+        ImportWarning
+    )
 
 from emm.preprocessing.abbreviation_util import abbreviations_to_words, legal_abbreviations_to_words
 
