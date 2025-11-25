@@ -58,7 +58,8 @@ preprocessing = [
 test = [
   "pytest",
   "pytest-ordering",
-  "virtualenv"
+  "virtualenv",
+  "unidecode"
 ]
 test-cov = [
   "coverage",
